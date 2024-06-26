@@ -22,6 +22,7 @@ Partial Class FrmDesinger
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDesinger))
         Me.版权声明 = New System.Windows.Forms.Label()
         Me.ToolBox = New System.Windows.Forms.ListBox()
@@ -30,7 +31,14 @@ Partial Class FrmDesinger
         Me.attributeView = New System.Windows.Forms.DataGridView()
         Me.attributeName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Value = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.转PythonTkinkerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.编写事件代码ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.attributeView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
+        Me.ContextMenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         '版权声明
@@ -38,7 +46,7 @@ Partial Class FrmDesinger
         Me.版权声明.AutoSize = True
         Me.版权声明.Font = New System.Drawing.Font("黑体", 16.0!)
         Me.版权声明.ForeColor = System.Drawing.Color.DarkGray
-        Me.版权声明.Location = New System.Drawing.Point(989, 643)
+        Me.版权声明.Location = New System.Drawing.Point(988, 689)
         Me.版权声明.Name = "版权声明"
         Me.版权声明.Size = New System.Drawing.Size(208, 27)
         Me.版权声明.TabIndex = 12
@@ -49,8 +57,8 @@ Partial Class FrmDesinger
         Me.ToolBox.Font = New System.Drawing.Font("黑体", 15.0!)
         Me.ToolBox.FormattingEnabled = True
         Me.ToolBox.ItemHeight = 25
-        Me.ToolBox.Items.AddRange(New Object() {"鼠标", "按钮", "文本框", "标签"})
-        Me.ToolBox.Location = New System.Drawing.Point(12, 34)
+        Me.ToolBox.Items.AddRange(New Object() {"鼠标", "按钮", "标签"})
+        Me.ToolBox.Location = New System.Drawing.Point(11, 80)
         Me.ToolBox.Name = "ToolBox"
         Me.ToolBox.Size = New System.Drawing.Size(218, 629)
         Me.ToolBox.TabIndex = 14
@@ -60,7 +68,7 @@ Partial Class FrmDesinger
         Me.ToolBoxTitle.AutoSize = True
         Me.ToolBoxTitle.Font = New System.Drawing.Font("黑体", 16.0!)
         Me.ToolBoxTitle.ForeColor = System.Drawing.Color.DarkGray
-        Me.ToolBoxTitle.Location = New System.Drawing.Point(62, 4)
+        Me.ToolBoxTitle.Location = New System.Drawing.Point(61, 50)
         Me.ToolBoxTitle.Name = "ToolBoxTitle"
         Me.ToolBoxTitle.Size = New System.Drawing.Size(96, 27)
         Me.ToolBoxTitle.TabIndex = 15
@@ -71,7 +79,7 @@ Partial Class FrmDesinger
         Me.attributeLbl.AutoSize = True
         Me.attributeLbl.Font = New System.Drawing.Font("黑体", 16.0!)
         Me.attributeLbl.ForeColor = System.Drawing.Color.DarkGray
-        Me.attributeLbl.Location = New System.Drawing.Point(1025, 4)
+        Me.attributeLbl.Location = New System.Drawing.Point(1024, 50)
         Me.attributeLbl.Name = "attributeLbl"
         Me.attributeLbl.Size = New System.Drawing.Size(68, 27)
         Me.attributeLbl.TabIndex = 17
@@ -81,7 +89,7 @@ Partial Class FrmDesinger
         '
         Me.attributeView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.attributeView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.attributeName, Me.Value})
-        Me.attributeView.Location = New System.Drawing.Point(920, 34)
+        Me.attributeView.Location = New System.Drawing.Point(919, 80)
         Me.attributeView.Name = "attributeView"
         Me.attributeView.RowHeadersWidth = 51
         Me.attributeView.RowTemplate.Height = 27
@@ -104,21 +112,63 @@ Partial Class FrmDesinger
         Me.Value.Name = "Value"
         Me.Value.Width = 125
         '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(235, 80)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(678, 629)
+        Me.Panel1.TabIndex = 19
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.转PythonTkinkerToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1209, 28)
+        Me.MenuStrip1.TabIndex = 20
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        '转PythonTkinkerToolStripMenuItem
+        '
+        Me.转PythonTkinkerToolStripMenuItem.Name = "转PythonTkinkerToolStripMenuItem"
+        Me.转PythonTkinkerToolStripMenuItem.Size = New System.Drawing.Size(142, 24)
+        Me.转PythonTkinkerToolStripMenuItem.Text = "转PythonTkinker"
+        '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.编写事件代码ToolStripMenuItem})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(211, 56)
+        '
+        '编写事件代码ToolStripMenuItem
+        '
+        Me.编写事件代码ToolStripMenuItem.Name = "编写事件代码ToolStripMenuItem"
+        Me.编写事件代码ToolStripMenuItem.Size = New System.Drawing.Size(210, 24)
+        Me.编写事件代码ToolStripMenuItem.Text = "编写事件代码"
+        '
         'FrmDesinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1209, 679)
+        Me.ClientSize = New System.Drawing.Size(1209, 721)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.attributeView)
         Me.Controls.Add(Me.attributeLbl)
         Me.Controls.Add(Me.ToolBoxTitle)
         Me.Controls.Add(Me.ToolBox)
         Me.Controls.Add(Me.版权声明)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmDesinger"
         Me.Text = "FrmDesinger"
         CType(Me.attributeView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        Me.ContextMenuStrip2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -131,4 +181,9 @@ Partial Class FrmDesinger
     Friend WithEvents attributeView As DataGridView
     Friend WithEvents attributeName As DataGridViewTextBoxColumn
     Friend WithEvents Value As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents 转PythonTkinkerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents 编写事件代码ToolStripMenuItem As ToolStripMenuItem
 End Class

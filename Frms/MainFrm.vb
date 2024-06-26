@@ -12,4 +12,8 @@
         ProjectWizard.Show()
         Close()
     End Sub
+
+    Private Sub ExitProgram_Click(sender As Object, e As EventArgs) Handles ExitProgram.Click
+        Application.Exit()
+    End Sub
 End Class

@@ -28,8 +28,11 @@ Partial Class MainFrm
         Me.NewProjectLbl = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.版权声明 = New System.Windows.Forms.Label()
+        Me.ExitProgramLbl = New System.Windows.Forms.Label()
+        Me.ExitProgram = New System.Windows.Forms.PictureBox()
         Me.NewProjectBtn = New System.Windows.Forms.PictureBox()
         Me.Logo = New System.Windows.Forms.PictureBox()
+        CType(Me.ExitProgram, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NewProjectBtn, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,6 +74,27 @@ Partial Class MainFrm
         Me.版权声明.TabIndex = 8
         Me.版权声明.Text = "B站ChenXiaoThi"
         '
+        'ExitProgramLbl
+        '
+        Me.ExitProgramLbl.Font = New System.Drawing.Font("黑体", 16.0!)
+        Me.ExitProgramLbl.ForeColor = System.Drawing.Color.DarkGray
+        Me.ExitProgramLbl.Location = New System.Drawing.Point(274, 336)
+        Me.ExitProgramLbl.Name = "ExitProgramLbl"
+        Me.ExitProgramLbl.Size = New System.Drawing.Size(132, 40)
+        Me.ExitProgramLbl.TabIndex = 10
+        Me.ExitProgramLbl.Text = "退出程序"
+        Me.ExitProgramLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ExitProgram
+        '
+        Me.ExitProgram.Image = Global.PyDesigner.My.Resources.Resources.ExitApp
+        Me.ExitProgram.Location = New System.Drawing.Point(288, 230)
+        Me.ExitProgram.Name = "ExitProgram"
+        Me.ExitProgram.Size = New System.Drawing.Size(90, 90)
+        Me.ExitProgram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ExitProgram.TabIndex = 9
+        Me.ExitProgram.TabStop = False
+        '
         'NewProjectBtn
         '
         Me.NewProjectBtn.Image = Global.PyDesigner.My.Resources.Resources.NewProject
@@ -97,6 +121,8 @@ Partial Class MainFrm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(812, 479)
+        Me.Controls.Add(Me.ExitProgramLbl)
+        Me.Controls.Add(Me.ExitProgram)
         Me.Controls.Add(Me.版权声明)
         Me.Controls.Add(Me.NewProjectLbl)
         Me.Controls.Add(Me.NewProjectBtn)
@@ -107,6 +133,7 @@ Partial Class MainFrm
         Me.MaximizeBox = False
         Me.Name = "MainFrm"
         Me.Text = "PyDesinger-B站ChenXiaoThi"
+        CType(Me.ExitProgram, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NewProjectBtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -120,4 +147,6 @@ Partial Class MainFrm
     Friend WithEvents NewProjectLbl As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents 版权声明 As Label
+    Friend WithEvents ExitProgramLbl As Label
+    Friend WithEvents ExitProgram As PictureBox
 End Class
